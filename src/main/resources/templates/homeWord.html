@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8" http-equiv="Content-Style" content="text/html" />
+    <title>Glossary</title>
+<!--    <link rel="stylesheet" type="text/css" href="../css/style.css"  />-->
+    <link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet" />
+
+</head>
+<body>
+<h1>Glossary</h1>
+<br />
+
+
+
+<form>
+<h2>Words:</h2>
+    <div  id="list" th:each="word: ${wordlist}">
+        <span id="rword"  th:text="${word.rus}"><p>rword</p></span>
+        <span>    -   </span>
+        <span id="eword" th:text="${word.eng}" ><p>eword</p></span>
+    </div>
+</form>
+
+<form id="add"  method="POST"   th:action="@{/add}" th:object="${word}">
+<!--    <label  class="inp" for="rus">Слово на русском: </label>-->
+<!--    <input th:field="*{rus}" type="text"/>-->
+<!--    <br />-->
+<!--    <input  th:field="*{eng}" type="text">-->
+<!--    <br />-->
+<!--    <input  type="submit" value="Add word"/>-->
+<div class="input">
+    <input type="text" th:field="*{rus}"/>
+    <br />
+    <input  th:field="*{eng}" type="text">
+    <br />
+    <input type="submit" class="btn btn-default" value="Send"  />
+</div>
+</form>
+
+
+</body>
+</html>

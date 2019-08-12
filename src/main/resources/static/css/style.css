@@ -1,0 +1,46 @@
+html{
+    background:url('http://oboi.cc/uploads/11_05_2013/view/201209/oboik.ru_15713.jpg') repeat-x #ddeea5 center top;
+}
+
+
+
+.input{
+    position: absolute;
+    top: 320px;
+    left: 50px;
+}
+input{
+    font-size: 2.5em;
+}
+
+span{
+    font-size: 3.5em;
+    font-weight: bold;;
+}
+#list{
+    color: white;
+    text-align: -webkit-center;
+    /*right: 80px;*/
+}
+h1{
+    font-size: 5em;
+    font-weight: bold;
+    text-align: center;
+    font-family: Jokerman;
+    color: lightpink;
+}
+
+
+h2{
+    text-align: center;
+    font-family: "Franklin Gothic Medium";
+    font-size: 4.2em;
+    color: white;
+}
+#add{
+    text-align: center;
+}
+.inp{
+    text-indent: 50px;
+    font-size: 1.5em;
+}
