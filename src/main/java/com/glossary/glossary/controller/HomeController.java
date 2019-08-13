@@ -44,6 +44,9 @@ public class HomeController {
         wordRepo.save(word);
         return "redirect:/";
     }
-
-
+    @PostMapping("/dall")
+    public  String deleteAll(){
+        wordRepo.deleteAll();
+        return "redirect:/";
+    }
 }
