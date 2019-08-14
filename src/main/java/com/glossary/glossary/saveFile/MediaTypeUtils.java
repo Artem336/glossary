@@ -1,0 +1,22 @@
+package com.glossary.glossary.saveFile;
+
+import org.springframework.http.MediaType;
+
+import javax.servlet.ServletContext;
+import java.awt.*;
+
+public class MediaTypeUtils {
+
+    public static MediaType getMediaTypeForFileName(ServletContext context,String fileName){
+
+        String mineType=context.getMimeType(fileName);
+
+        try{
+            MediaType mediaType=MediaType.parseMediaType(mineType);
+            return mediaType;
+        }catch (Exception e) {
+            return MediaType.APPLICATION_OCTET_STREAM;
+        }
+
+    }
+}

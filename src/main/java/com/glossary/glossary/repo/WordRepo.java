@@ -9,4 +9,5 @@ public interface WordRepo extends CrudRepository<Word,Long> {
     public Word save(Word word);
 
     Iterable<Word> findAllByOrderByIdDesc();
+
 }

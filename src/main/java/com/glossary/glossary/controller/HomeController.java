@@ -10,6 +10,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 @Slf4j
@@ -18,7 +22,6 @@ import java.util.List;
 public class HomeController {
 
     private WordRepo wordRepo;
-
 
     @Autowired
     public HomeController(WordRepo wordRepo) {
@@ -47,6 +50,13 @@ public class HomeController {
     @PostMapping("/dall")
     public  String deleteAll(){
         wordRepo.deleteAll();
+        return "redirect:/";
+    }
+
+    @PostMapping("/del/{id}")
+    public String deleteWord(@PathVariable("id") Long id){
+        log.info("delete word with id= "+id);
+        wordRepo.deleteById(id);
         return "redirect:/";
     }
 }

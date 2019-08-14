@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+      xmlns:th="http://www.thymeleaf.org" xmlns:ht="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta charset="UTF-8" http-equiv="Content-Style" content="text/html" />
@@ -13,12 +13,17 @@
 <br />
 
 <form>
-<h2>Words:</h2>
+<h2 id="hwords">Words:</h2>
     <div  id="list" th:each="word: ${wordlist}">
         <span id="rword"  th:text="${word.rus}"><p>rword</p></span>
         <span>    -   </span>
         <span id="eword" th:text="${word.eng}" ><p>eword</p></span>
+        <form method="post"  th:action="@{'/del/'+${word.id}}" >
+            <input type="hidden" name="id" th:value="${word.id}" />
+            <button type="submit"  class="delete">-</button>
+        </form>
     </div>
+
 </form>
 
 <form id="add"  method="POST"   th:action="@{/add}" th:object="${word}">
@@ -36,7 +41,15 @@
 
 
 <form  th:action="@{/dall}" th:object="${word}" method="post"  >
-<button  id="deleteall" type="submit"> Delete All!</button>
+<button   class="specbutton" id="deleteall" type="submit"> Delete All!</button>
+</form>
+
+<!--<form  th:action="@{/file}"  method="post"  >-->
+<!--<button class="specbutton"  id="savefile" type="submit">Save file!</button>-->
+<!--</form>-->
+
+<form  th:action="@{/download}"  method="post"  >
+<button class="specbutton"  id="download" type="submit">Download file</button>
 </form>
 
 </body>
