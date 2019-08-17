@@ -45,18 +45,18 @@ public class DownloadController {
     }
 
 
-
     public void save(Iterable<Word> words){
 
         XWPFDocument document=new XWPFDocument();
         XWPFParagraph paragraph=document.createParagraph();
         XWPFRun run=paragraph.createRun();
+        run.setFontSize(22);
+        run.setBold(true);
         try{
             FileOutputStream output = new FileOutputStream("C:\\Users\\artem\\OneDrive\\Рабочий стол\\test\\test.docx");
             words.forEach(e-> {
                 run.setText(e.getEng()+" - "+e.getRus()+"\n");
                 run.addBreak();
-
             });
             document.write(output);
             output.close();

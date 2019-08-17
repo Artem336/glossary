@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" http-equiv="Content-Style" content="text/html" />
+    <title>LearningWords</title>
+    <link href="../static/css/learnstyle.css" th:href="@{/css/learnstyle.css}" rel="stylesheet" />
+    <link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet" />
+    <script src="../static/js/main.js" th:src="@{/js/main.js}"></script>
+</head>
+<body>
+<!--<h1>Learning Words</h1>-->
+
+
+    <div id="sliderw">
+        <div id="polosaw">
+            <div   th:each="word: ${words}" >
+<!--                    <fieldset>-->
+<!--                        <p><span  th:text="${word.eng}" >&lt;!&ndash;<p>eword</p>&ndash;&gt;</span></p>-->
+<!--                    </fieldset>-->
+                    <div class="trainword">
+                        <p><span class="eng"  th:text="${word.eng}" ></span>
+                        <p><span  class="rus" th:text="${word.rus}"></span></p>
+                        </p>
+
+                    </div>
+            </div>
+
+        </div>
+
+    </div>
+    <button id="slider-leftw">Next</button>
+
+
+
+
+
+<form  th:action="@{/}"  method="get"  >
+    <button class="specbutton"  id="back" type="submit">Back</button>
+</form>
+
+<br />
+<!--<div id="slider">-->
+<!--    <div id="polosa">-->
+<!--        <img th:src="@{img/1.jpg}" alt="">-->
+<!--        <img th:src="@{img/2.jpg}" alt="">-->
+<!--        <img th:src="@{img/3.jpg}" alt="">-->
+<!--        <img th:src="@{img/4.jpg}" alt="">-->
+<!--        <img th:src="@{img/5.jpg}" alt="">-->
+<!--        <img th:src="@{img/6.jpg}" alt="">-->
+<!--        <img th:src="@{img/7.jpg}" alt="">-->
+<!---->
+<!--    </div>-->
+<!---->
+<!--</div>-->
+<!---->
+<!--<button id="slider-left">left</button>-->
+<!---->
+</body>
+</html>

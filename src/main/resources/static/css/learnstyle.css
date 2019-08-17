@@ -1,0 +1,115 @@
+
+
+#back{
+    position: absolute;
+    top: 120px;
+    right: 50px;
+    font-size: 1.8em;
+}
+
+/*button#next{*/
+/*    font-size: 2em;*/
+/*    position: absolute;*/
+/*    top: 550px;*/
+/*    left: 650px;*/
+/*    font-size: 2.8em;*/
+/*    font-weight: bold;*/
+/*    border-color: black;*/
+/*}*/
+
+/*#slider{*/
+/*    width:384px;*/
+/*    height:128px;*/
+/*    border:5px solid black;*/
+/*    margin: 50px auto;*/
+/*    overflow:hidden;*/
+/*}*/
+/**/
+/*#polosa{*/
+/*    background:pink;*/
+/*    width:896px;*/
+/*    left:0;*/
+/*    position:relative;*/
+/*    transition:all ease 1s;*/
+/*}*/
+/*#polosa img{*/
+/*    float:left;*/
+
+/*}*/
+/**/
+/*#polosa:after{*/
+/*    content:"";*/
+/*    display:block;*/
+/*    clear:both;*/
+/*}*/
+/*button#slider-left{*/
+/*    position: absolute;*/
+/*    font-size: 2em;*/
+/*        left: 800px;*/
+/*}*/
+/**/
+/*html {*/
+/*    background:url('https://st2.depositphotos.com/5750784/9046/v/950/depositphotos_90464720-stock-illustration-seamless-vector-pattern-light-pastel.jpg') repeat-x #ddeea5  top;*/
+/*}*/
+
+#sliderw{
+    width:1064px;
+    height:384px;
+    border:5px solid black;
+    margin: 50px auto;
+    overflow:hidden;
+    position: relative;
+    border-radius: 20px;
+}
+
+#polosaw{
+            /*background:pink;*/
+    width: 0;
+    left:0;
+    position:relative;
+    transition:all ease 1s;
+}
+
+#polosaw:after{
+    content:"";
+    display:block;
+    clear:both;
+}
+button#slider-leftw{
+    position: absolute;
+    font-size: 3.8em;
+        left: 800px;
+        font-weight: bold;
+        color: white;
+        border-color: black;
+        border-width: 5px;
+        border-radius: 20px;
+        background-color: rgba(8, 105, 21, 0.5);
+        color:rgba(249, 247, 248, 0.9);
+}
+div .trainword {
+    height: 384px;
+    width: 512px; /* Ширина */
+    padding: 0 10px; /* Поля */
+    font-size: 1.8em;
+    font-weight: bold;
+    text-align: center;
+    /*background: url("https://cdn.pixabay.com/photo/2015/12/12/17/35/seamless-pattern-1089800__340.jpg");*/
+    background: rgba(182, 13, 106, 0.3);
+    color: #4954fd;
+}
+#polosaw div{
+    float: left;
+}
+
+fieldset:nth-child(odd) {
+    float: left; /* Обтекание для всех нечётных элементов */
+}
+.eng{
+font-size: 4.7em;
+}
+.rus{
+    font-size: 0.8em;
+    font-weight: normal;
+
+}
