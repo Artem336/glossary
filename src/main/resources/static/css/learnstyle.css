@@ -2,58 +2,17 @@
 
 #back{
     position: absolute;
-    top: 120px;
+    top: 60px;
     right: 50px;
     font-size: 1.8em;
 }
 
-/*button#next{*/
-/*    font-size: 2em;*/
-/*    position: absolute;*/
-/*    top: 550px;*/
-/*    left: 650px;*/
-/*    font-size: 2.8em;*/
-/*    font-weight: bold;*/
-/*    border-color: black;*/
-/*}*/
-
-/*#slider{*/
-/*    width:384px;*/
-/*    height:128px;*/
-/*    border:5px solid black;*/
-/*    margin: 50px auto;*/
-/*    overflow:hidden;*/
-/*}*/
-/**/
-/*#polosa{*/
-/*    background:pink;*/
-/*    width:896px;*/
-/*    left:0;*/
-/*    position:relative;*/
-/*    transition:all ease 1s;*/
-/*}*/
-/*#polosa img{*/
-/*    float:left;*/
-
-/*}*/
-/**/
-/*#polosa:after{*/
-/*    content:"";*/
-/*    display:block;*/
-/*    clear:both;*/
-/*}*/
-/*button#slider-left{*/
-/*    position: absolute;*/
-/*    font-size: 2em;*/
-/*        left: 800px;*/
-/*}*/
-/**/
-/*html {*/
-/*    background:url('https://st2.depositphotos.com/5750784/9046/v/950/depositphotos_90464720-stock-illustration-seamless-vector-pattern-light-pastel.jpg') repeat-x #ddeea5  top;*/
-/*}*/
 
 #sliderw{
-    width:1064px;
+    top: 140px;
+    /*width:1064px;*/
+    width:1440px;
+    /*width: 1576px;*/
     height:384px;
     border:5px solid black;
     margin: 50px auto;
@@ -77,6 +36,7 @@
 }
 button#slider-leftw{
     position: absolute;
+    top: 650px;
     font-size: 3.8em;
         left: 800px;
         font-weight: bold;
@@ -89,15 +49,23 @@ button#slider-leftw{
 }
 div .trainword {
     height: 384px;
-    width: 512px; /* Ширина */
+    /*width: 512px; !* Ширина *!*/
+    width: 700px; /* Ширина */
     padding: 0 10px; /* Поля */
-    font-size: 1.8em;
+    /*font-size: 2em;*/
     font-weight: bold;
     text-align: center;
-    /*background: url("https://cdn.pixabay.com/photo/2015/12/12/17/35/seamless-pattern-1089800__340.jpg");*/
+    position: relative;
     background: rgba(182, 13, 106, 0.3);
+    /*background: rgba(182, 13, 106, 0);*/
     color: #4954fd;
 }
+
+div .trainword:hover{
+    background: rgba(182, 13, 106, 0.4);
+
+}
+
 #polosaw div{
     float: left;
 }
@@ -105,11 +73,58 @@ div .trainword {
 fieldset:nth-child(odd) {
     float: left; /* Обтекание для всех нечётных элементов */
 }
-.eng{
-font-size: 4.7em;
+
+
+.out{
+    /*width: 512px;*/
+    width: 700px;
+    height: 384px;
+    border: 0px;
+    position: relative;
+    overflow: hidden;
+    padding: 0 10px; /* Поля */
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
 }
+
+.in1, .in2{
+    /*width: 512px;*/
+    width: 700px;
+    height: 384px;
+    position: absolute;
+    left:0;
+    top:0;
+    overflow: hidden;
+    transition: all ease 1000ms;
+}
+
+/*.in2{*/
+/*    background: rgba(182, 13, 106, 0.3);*/
+/*}*/
+/*.in1{*/
+/*    background: rgba(182, 13, 106, 0.3);*/
+/*}*/
+
 .rus{
-    font-size: 0.8em;
-    font-weight: normal;
+    font-size: 3em;
+    position: absolute;
+    top: 125px;
+    /*left: 190px;*/
+    left: 140px;
+    color: rgba(0, 0, 0, 0);
+
+}
+
+ .in1:hover span  {
+    color:#4954fd;
+}
+.eng{
+    font-size: 3em;
+    position: absolute;
+    top: 125px;
+    /*left: 200px;*/
+    left: 175px;
+    color: #4954fd;
 
 }

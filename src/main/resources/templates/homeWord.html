@@ -6,18 +6,18 @@
     <meta charset="UTF-8" http-equiv="Content-Style" content="text/html" />
     <title>Glossary</title>
     <link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet" />
-
+    <script src="../static/js/home.js" defer th:src="@{/js/home.js}"></script>
 </head>
 
 <h1>Glossary</h1>
 <br />
 
-<form>
+<form id="listWords">
 <h2 id="hwords">Words:</h2>
     <div  id="list" th:each="word: ${wordlist}">
-        <span id="rword"  th:text="${word.rus}"><p>rword</p></span>
+        <span id="rword" class="test1" th:text="${word.rus}"><p>rword</p></span>
         <span>    -   </span>
-        <span id="eword" th:text="${word.eng}" ><p>eword</p></span>
+        <span id="eword" class="test1" th:text="${word.eng}" ><p>eword</p></span>
         <form method="post"  th:action="@{'/del/'+${word.id}}" >
             <input type="hidden" name="id" th:value="${word.id}" />
             <button type="submit"  class="delete">-</button>
@@ -28,11 +28,11 @@
 
 <form id="add"  method="POST"   th:action="@{/add}" th:object="${word}">
 <div class="input">
-    <h2>Add new woed:</h2>
-    <input class="google" type="text" th:field="*{rus}"/>
+    <h2 id="anw">Add new word:</h2>
+    <input  class="google" th:field="*{eng}" type="text" placeholder="Word in English" />
     <br />
     <br />
-    <input  class="google" th:field="*{eng}" type="text">
+    <input class="google" type="text" th:field="*{rus}" placeholder="Word in Russian" />
     <br />
     <br />
     <input type="submit" class="send" value="Send"  />
@@ -54,6 +54,10 @@
 
 <form  th:action="@{/learn}"  method="get"  >
 <button class="specbutton"  id="learn" type="submit">Learn words</button>
+</form>
+
+<form >
+<button class="specbutton"  id="showList" type="submit" >Show words</button>
 </form>
 
 </body>

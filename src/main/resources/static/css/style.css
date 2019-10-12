@@ -1,6 +1,6 @@
 html{
     /*background:url('http://oboi.cc/uploads/11_05_2013/view/201209/oboik.ru_15713.jpg') repeat-y #ddeea5 center top}*/
-    background:url('http://for-dle.ru/uploads/posts/2017-04/1492106508_222.jpg  ') repeat-x black  top}
+    background:url('http://for-dle.ru/uploads/posts/2017-04/1492106508_222.jpg  ') repeat-x white  top}
 
 #deleteall{
     position: absolute;
@@ -13,19 +13,30 @@ html{
 .input{
     position: absolute;
     top: 210px;
-    left: 50px;
+    left: 500px;
 }
 input{
     font-size: 2.5em;
 }
 
-span{
-    font-size: 3.5em;
+span.test1{
+    font-size: 2.5em;
     font-weight: bold;;
 }
+
+
+#listWords{
+    target: root;
+    /*visibility: hidden;*/
+display: none;
+}
+
 #list{
     color: white;
     text-align: -webkit-center;
+    display: none;
+    target: root;
+    /*visibility: hidden;*/
     /*right: 80px;*/
 }
 h1{
@@ -37,25 +48,35 @@ h1{
 }
 
 
-h2{
-    text-align: center;
+h2#anw{
+    position: relative;
+    left: -160px;
+    /*text-align: center;*/
     font-family: "Franklin Gothic Medium";
-    font-size: 4.2em;
-    color: white;
+    font-size: 3.8em;
+    color: rgba(250,240,230,0.5);
 }
 
 h2#hwords{
     top: 200px;
 }
 #add{
+    target: root;
     text-align: center;
+
 }
 .inp{
     text-indent: 50px;
     font-size: 1.5em;
 }
 
-
+::-webkit-input-placeholder { /* для webkit-браузеров */
+    color: dimgrey;
+    font-style: italic;
+    /*font-size: 0.8em;*/
+    font-size: 1em;
+    color: rgba(250,240,230,0.6);
+}
 
 input.google:focus {
     outline:none;
@@ -65,8 +86,11 @@ input.google:focus {
 }
 input.google {
     border: 2px solid #09040d;
-    background: rgba(137, 182, 249, 0.91);
+    background: rgba(137, 182, 249, 0.71);
     border-radius: 15px;
+    height: 80px;
+    width: 700px;
+    font-size: 2.3em;
 }
 input.send{
     margin:0 auto;
@@ -88,6 +112,7 @@ input.send{
     -o-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+    border-radius: 15px;
 }
 
 input.send:hover {
@@ -179,3 +204,9 @@ button.specbutton:not(:hover) {
     font-size: 1.8em;
 }
 
+#showList{
+    position: absolute;
+    top: 300px;
+    right: 50px;
+    font-size: 1.8em;
+}
